@@ -1,0 +1,61 @@
+// change the theme
+:root {
+  --font-color: #424242;
+  --bg-color: #fff;
+}
+
+[data-theme="dark"] {
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+}
+
+$primary: rgb(214, 84, 24);
+$secondary: rgb(135, 227, 135);
+$danger: #fa5c7c;
+$warning: #ffbc00;
+
+body{
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  transition: background .4s, color .4s;
+}
+
+.border-primary{
+  border-color: $primary;
+}
+
+.border-secondary{
+  border-color: $secondary;
+}
+
+.text-primary{
+  color: $primary;
+}
+
+.text-secondary{
+  color: $secondary;
+}
+
+.text-danger{
+  color: $danger;
+}
+
+.text-warning{
+  color: $warning;
+}
+
+.bg-primary{
+  background-color: $primary;
+}
+
+.bg-secondary{
+  background-color: $secondary;
+}
+
+.bg-danger{
+  background-color: $danger;
+}
+
+.bg-warning{
+  background-color: $warning;
+}
