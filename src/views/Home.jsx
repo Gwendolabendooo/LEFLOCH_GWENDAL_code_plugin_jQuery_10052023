@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//composants
+import Calendar from '../components/Calendar'
+
 class Home extends React.Component {
     saveEmployee() {
         // Logique pour sauvegarder l'employé
@@ -55,6 +58,7 @@ class Home extends React.Component {
                             <option>Legal</option>
                         </select>
                     </form>
+                    <Calendar/>
 
                     <button onClick={this.saveEmployee}>Save</button>
                 </div>
