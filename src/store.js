@@ -1,0 +1,166 @@
+// store.js
+import { createStore } from 'redux';
+
+const initialState = [
+      {
+        id: 1,
+        firstName: "Alex",
+        lastName: "A",
+        startDate: "2021-08-12",
+        department: "Human resources",
+        dateOfBirth: "2002-03-31",
+        street: "Nuggets street",
+        city: "Denver",
+        state: "Colorado",
+        zipCode: "33000",
+      },
+      {
+        id: 2,
+        firstName: "Randy",
+        lastName: "March",
+        startDate: "1990-07-14",
+        department: "Legal",
+        dateOfBirth: "1968-01-01",
+        street: "Kenny's road",
+        city: "South Park",
+        state: "Colorado",
+        zipCode: "75000",
+      },
+      {
+        id: 3,
+        firstName: "Robert",
+        lastName: "Nesta",
+        startDate: "2019-12-12",
+        department: "Legal",
+        dateOfBirth: "1985-02-07",
+        street: "Kingston av",
+        city: "Miami",
+        state: "Florida",
+        zipCode: "31000",
+      },
+      {
+        id: 4,
+        firstName: "Julia",
+        lastName: "R",
+        startDate: "2020-07-08",
+        department: "Engineering",
+        dateOfBirth: "1998-04-09",
+        street: "Vine alley",
+        city: "Compton",
+        state: "California",
+        zipCode: "56000",
+      },
+      {
+        id: 5,
+        firstName: "Ray",
+        lastName: "Demption",
+        startDate: "2021-08-12",
+        department: "Marketing",
+        dateOfBirth: "2002-04-23",
+        street: "Mormon's road",
+        city: "Salt Lake City",
+        state: "Utah",
+        zipCode: "33000",
+      },
+      {
+        id: 6,
+        firstName: "Marshall",
+        lastName: "M",
+        startDate: "1992-03-17",
+        department: "Marketing",
+        dateOfBirth: "1972-10-17",
+        street: "Shady Street",
+        city: "Detroit",
+        state: "Michigan",
+        zipCode: "75000",
+      },
+      {
+        id: 7,
+        firstName: "Meg",
+        lastName: "W",
+        startDate: "2021-05-13",
+        department: "Human resources",
+        dateOfBirth: "1980-02-23",
+        street: "Stripes av",
+        city: "Chicago",
+        state: "Illinois",
+        zipCode: "31000",
+      },
+      {
+        id: 8,
+        firstName: "Robert",
+        lastName: "Downey",
+        startDate: "2020-09-23",
+        department: "Legal",
+        dateOfBirth: "1978-02-24",
+        street: "12th avenue",
+        city: "Sacramento",
+        state: "California",
+        zipCode: "56000",
+      },
+      {
+        id: 9,
+        firstName: "Malcolm",
+        lastName: "Noname",
+        startDate: "2021-08-12",
+        department: "Sales",
+        dateOfBirth: "2002-03-31",
+        street: "Baker Street",
+        city: "Richmond",
+        state: "Virginia",
+        zipCode: "33000",
+      },
+      {
+        id: 10,
+        firstName: "Jack",
+        lastName: "W",
+        startDate: "1990-07-14",
+        department: "Sales",
+        dateOfBirth: "1975-01-01",
+        street: "21th avenue",
+        city: "Harlem",
+        state: "New York",
+        zipCode: "75000",
+      },
+      {
+        id: 11,
+        firstName: "Gwen",
+        lastName: "S",
+        startDate: "2021-12-12",
+        department: "Marketing",
+        dateOfBirth: "1980-12-23",
+        street: "Dolphins road",
+        city: "Orlando",
+        state: "Florida",
+        zipCode: "31000",
+      },
+      {
+        id: 12,
+        firstName: "Megan",
+        lastName: "Racoon",
+        startDate: "2020-09-23",
+        department: "Sales",
+        dateOfBirth: "1998-02-24",
+        street: "Milky way road",
+        city: "Houston",
+        state: "Texas",
+        zipCode: "56000",
+      },
+    ];
+
+const employeeReducer = (state = {employees: initialState}, action) => {
+    switch (action.type) {
+      case 'ADD_EMPLOYEE':
+        return {
+          ...state,
+          employees: [...state.employees, action.payload],
+        };
+      default:
+        return state;
+    }
+  };
+
+// Créez le store Redux avec le reducer unique et appliquez les middlewares
+const store = createStore(employeeReducer);
+
+export default store;
