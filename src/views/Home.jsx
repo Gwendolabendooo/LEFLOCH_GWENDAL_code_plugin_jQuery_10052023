@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 
 import { addEmployee } from '../actions';
 
+//modal package
+import Modal from '@gwendish/modal-react'
+
 //components
 import Dropdown from '../components/dropdown'
-import Modal from '../components/Modal'
 import Calendar from '../components/Calendar';
 
 const Home = ({employees, addEmployee}) => {
