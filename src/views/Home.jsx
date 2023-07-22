@@ -127,7 +127,7 @@ const Home = ({employees, addEmployee}) => {
 
         {error && <p className="error text-danger">{error}</p>}
 
-        <button onClick={saveEmployee}>Save</button>
+        <button style={{backgroundColor: '#74986c', fontWeight: 'bold', color: 'black'}} onClick={saveEmployee}>Save</button>
       </div>
       {showConfirmation &&
         <Modal

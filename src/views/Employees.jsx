@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 //components
 import Table from '../components/Table'
 
-const EmployeePage = ({employees}) => {
+const EmployeePage = ({ employees }) => {
   const columns = [
     { label: 'First Name', field: 'firstName' },
     { label: 'Last Name', field: 'lastName' },
@@ -19,7 +19,7 @@ const EmployeePage = ({employees}) => {
   ];
 
   if (!employees) {
-    return(
+    return (
       'loading'
     )
   }
@@ -29,8 +29,8 @@ const EmployeePage = ({employees}) => {
       <h1 className='mb-3'>Employee List</h1>
       <Table employees={employees} columns={columns} />
       <Link to="/">
-        <button className='mt-4'>Go Back</button>
-        </Link>
+        <button className='mt-4' style={{backgroundColor: '#74986c', fontWeight: 'bold', color: 'black'}}>Go Back</button>
+      </Link>
     </div>
   );
 };

@@ -155,9 +155,9 @@ const CustomCalendar = ({ label, updateDate }) => {
 
 	return (
 		<div className="position-relative d-flex flex-column" ref={calendarContainerRef}>
-			<label htmlFor="start-date">{label}</label>
+			<label htmlFor={"start-date"+label}>{label}</label>
 			<input
-				id="start-date"
+				id={"start-date"+label}
 				type="text"
 				autoComplete="off"
 				readOnly
