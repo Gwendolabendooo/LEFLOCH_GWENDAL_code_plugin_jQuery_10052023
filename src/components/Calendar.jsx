@@ -160,6 +160,7 @@ const CustomCalendar = ({ label, updateDate }) => {
 				id="start-date"
 				type="text"
 				autoComplete="off"
+				readOnly
 				value={selectedDate ? selectedDate.toISOString().slice(0, 10) : ''}
 				onFocus={() => {
 					setDisplayCalendar(true);
