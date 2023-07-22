@@ -26,7 +26,7 @@ const EmployeePage = ({employees}) => {
 
   return (
     <div className='m-3 p-3 d-flex flex-column'>
-      <h1 className='mb-1'>Employee List</h1>
+      <h1 className='mb-3'>Employee List</h1>
       <Table employees={employees} columns={columns} />
       <Link to="/">
         <button className='mt-4'>Go Back</button>

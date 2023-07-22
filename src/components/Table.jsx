@@ -95,7 +95,7 @@ const EmployeeTable = ({ employees, columns }) => {
 
   return (
     <div>
-      <div className='mt-4 d-flex flex-row justify-content-between align-items-center'>
+      <div className='d-flex flex-row justify-content-between align-items-center'>
         <div>
           <input
             type="text"
