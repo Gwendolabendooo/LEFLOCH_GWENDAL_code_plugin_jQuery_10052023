@@ -160,7 +160,7 @@ const employeeReducer = (state = {employees: initialState}, action) => {
     }
   };
 
-// Créez le store Redux avec le reducer unique et appliquez les middlewares
+// Créez le store Redux avec le reducer unique
 const store = createStore(employeeReducer);
 
 export default store;
